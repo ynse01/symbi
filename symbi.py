@@ -1,6 +1,7 @@
 import argparse
+from common.commands import *
 
-def main():
+def main() -> None:
     my_parser = argparse.ArgumentParser(prog='symbi',
                                         description='List the available subcommands',
                                         add_help=True)
@@ -25,6 +26,8 @@ def main():
     args = my_parser.parse_args()
 
     print(args)
+    runProcess(["python", "--version"])
+    
 
 if __name__ == "__main__":
     main()
